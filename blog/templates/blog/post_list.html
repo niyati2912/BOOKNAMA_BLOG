@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore Blog</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        h1 { color: #2c3e50; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 15px 0; padding: 10px 0; border-bottom: 1px solid #eee; }
+        a { text-decoration: none; font-size: 1.2em; color: #2980b9; }
+        a:hover { text-decoration: underline; }
+        .meta { color: #7f8c8d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📚 Bookstore Blog</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+            <div class="meta">By {{ post.author }} | {{ post.created_at|date:"F d, Y" }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

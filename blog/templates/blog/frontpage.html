@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 BookNama Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f3e5dc, #e4c9b0); color: #3e2c1c;">
+
+<div style="background-color: #7a4e34; color: #fff; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center;">
+  <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 36px;">📚 BookNama Blog</h1>
+  <div>
+    <button onclick="login()" style="background: #f3e5dc; color: #7a4e34; padding: 10px 18px; margin-right: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Login</button>
+    <button onclick="signup()" style="background: #f3e5dc; color: #7a4e34; padding: 10px 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Sign Up</button>
+    <span id="username" style="margin-left: 20px; font-size: 16px;">Hello, Guest!</span>
+  </div>
+</div>
+
+<div style="display: flex; padding: 30px;">
+
+  <div style="width: 220px; background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">🍁 About Us</a></li>
+      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">🖋️ Authors</a></li>
+      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">📚 Books</a></li>
+      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">✍️ Post a Blog</a></li>
+    </ul>
+  </div>
+
+  <div style="flex: 1; margin-left: 30px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px;">📖 Latest Blogs</h2>
+
+    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">The Secret Library</h3>
+      <p>Explore a hidden world of forgotten books and lost stories...</p>
+    </div>
+
+    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">BookTok Hits of 2025</h3>
+      <p>Trending titles making waves on BookTok this year!</p>
+    </div>
+
+    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">How to Start a Book Blog</h3>
+      <p>Step-by-step guide to creating your own book-loving community.</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

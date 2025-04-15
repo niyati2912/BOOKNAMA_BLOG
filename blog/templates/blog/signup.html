@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+</head>
+<body style="font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #b58b5f, #a97455); padding: 50px;">
+
+  <div style="max-width: 400px; margin: auto; background: #fdfcf8; padding: 35px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+    <h2 style="text-align: center; margin-bottom: 25px; color: #5c3a21;">☕ Join our Booknama Blog!!</h2>
+    
+    <form method="POST" style="display: flex; flex-direction: column;">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+      <button type="submit" style="padding: 12px; background-color: #7a4e34; color: #fff; border: none; border-radius: 6px; margin-top: 15px; cursor: pointer; font-size: 16px;">Sign Up</button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 20px; color: #5c3a21;">
+      Already a member? <a href="{% url 'login' %}" style="color: #a97455; text-decoration: none; font-weight: bold;">Login here</a>
+    </p>
+  </div>
+
+</body>
+</html>

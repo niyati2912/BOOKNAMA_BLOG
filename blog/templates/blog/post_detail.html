@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        h1 { color: #2c3e50; }
+        .meta { color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px; }
+        img { max-width: 100%; margin-bottom: 20px; border-radius: 10px; }
+        a { text-decoration: none; color: #2980b9; }
+        a:hover { text-decoration: underline; }
+        .back-link { margin-top: 30px; display: inline-block; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>{{ post.title }}</h1>
+    <p class="meta">By {{ post.author }} | {{ post.created_at|date:"F d, Y" }}</p>
+    {% if post.cover_image %}
+    <img src="{{ post.cover_image.url }}" alt="{{ post.title }}">
+    {% endif %}
+    <div>
+        {{ post.content|linebreaks }}
+    </div>
+    <a href="/" class="back-link">← Back to blog list</a>
+</div>
+</body>
+</html>
