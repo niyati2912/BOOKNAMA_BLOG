@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from .models import BlogPost
+from .forms import BlogPostForm  # Import the BlogPostForm
 
 # Blog Views
 def frontpage(request):
@@ -14,6 +15,20 @@ def post_list(request):
 def post_detail(request, post_id):
     post = get_object_or_404(BlogPost, id=post_id)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+from django.shortcuts import render, redirect
+from .forms import BlogPostForm  # Make sure this form exists
+
+def post_blog(request):
+    if request.method == 'POST':
+        form = BlogPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            blog = form.save()
+            return render(request, 'blog/post_blog.html', {'form': BlogPostForm(), 'latest_post': blog})
+    else:
+        form = BlogPostForm()
+
+    return render(request, 'blog/post_blog.html', {'form': form})
 
 # User Authentication Views
 def signup_view(request):

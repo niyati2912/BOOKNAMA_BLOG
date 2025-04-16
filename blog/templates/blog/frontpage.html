@@ -5,50 +5,141 @@
   <meta charset="UTF-8">
   <title>📚 BookNama Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e6d4f0, #c9b6e4);
+      color: #3e2c4a;
+      overflow-x: hidden;
+    }
+    .header {
+      background-color: #6a4c93;
+      color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+    }
+    .sidebar {
+      width: 220px;
+      background: #f9f4fb;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .sidebar a {
+      color: #6a4c93;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin: 15px 0;
+    }
+    .main {
+      flex: 1;
+      margin-left: 30px;
+    }
+    .card {
+      background: #fdfcf8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: float 20s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-50px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
-<body style="margin: 0; font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f3e5dc, #e4c9b0); color: #3e2c1c;">
 
-<div style="background-color: #7a4e34; color: #fff; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center;">
-  <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 36px;">📚 BookNama Blog</h1>
-  <div>
-    <button onclick="login()" style="background: #f3e5dc; color: #7a4e34; padding: 10px 18px; margin-right: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Login</button>
-    <button onclick="signup()" style="background: #f3e5dc; color: #7a4e34; padding: 10px 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Sign Up</button>
-    <span id="username" style="margin-left: 20px; font-size: 16px;">Hello, Guest!</span>
-  </div>
+<body>
+
+<div class="header">
+  <h1>📚 BookNama Blog</h1>
 </div>
 
 <div style="display: flex; padding: 30px;">
 
-  <div style="width: 220px; background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <ul style="list-style: none; padding: 0; margin: 0;">
-      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">🍁 About Us</a></li>
-      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">🖋️ Authors</a></li>
-      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">📚 Books</a></li>
-      <li style="margin: 15px 0;"><a href="#" style="color: #7a4e34; text-decoration: none; font-weight: bold;">✍️ Post a Blog</a></li>
-    </ul>
+  <div class="sidebar">
+    <a href="#">🍁 About Us</a>
+    <a href="#">🖋️ Authors</a>
+    <a href="#">📚 Books</a>
+    <a href="#">✍️ Post a Blog</a>
   </div>
 
-  <div style="flex: 1; margin-left: 30px;">
+  <div class="main">
     <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px;">📖 Latest Blogs</h2>
 
-    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">The Secret Library</h3>
-      <p>Explore a hidden world of forgotten books and lost stories...</p>
+    <!-- Blog Card Example -->
+    <div class="card">
+      <h3>The Secret Library</h3>
+      <ul>
+        <li>Discover ancient, forgotten books from around the world.</li>
+        <li>Rare manuscripts hidden in old city basements.</li>
+        <li>How book hunters track down lost titles.</li>
+        <li>The influence of secret books on modern writers.</li>
+        <li>Weirdest books ever found in libraries.</li>
+        <li>The underground trade of banned books.</li>
+        <li>Documentaries you must watch on this topic.</li>
+        <li>Where you can visit secret libraries today.</li>
+      </ul>
     </div>
 
-    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">BookTok Hits of 2025</h3>
-      <p>Trending titles making waves on BookTok this year!</p>
+    <div class="card">
+      <h3>BookTok Hits of 2025</h3>
+      <ul>
+        <li>Trending fantasy novels shaking up BookTok.</li>
+        <li>The most talked-about debut authors this year.</li>
+        <li>Books that received viral video reactions.</li>
+        <li>Why BookTok is changing the book industry.</li>
+        <li>Books that got Netflix or film deals from BookTok buzz.</li>
+        <li>Controversial titles and fan debates.</li>
+        <li>Underrated gems discovered through BookTok.</li>
+        <li>Follow these top BookTok creators!</li>
+      </ul>
     </div>
 
-    <div style="background: #fdfcf8; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">How to Start a Book Blog</h3>
-      <p>Step-by-step guide to creating your own book-loving community.</p>
+    <div class="card">
+      <h3>How to Start a Book Blog</h3>
+      <ul>
+        <li>Select a niche: reviews, lists, author interviews.</li>
+        <li>Pick a platform — WordPress, Blogger, or Django!</li>
+        <li>Write honest, engaging, original content.</li>
+        <li>Use aesthetic images and social media teasers.</li>
+        <li>Collaborate with other book bloggers.</li>
+        <li>Join bookish communities and forums.</li>
+        <li>Monetize through affiliate links and sponsors.</li>
+        <li>Never stop reading — your content depends on it!</li>
+      </ul>
     </div>
 
   </div>
 </div>
 
-<script src="{% static 'script.js' %}"></script>
+<!-- Floating Bubbles -->
+<div class="bubble" style="width: 60px; height: 60px; top: 10%; left: 20%;"></div>
+<div class="bubble" style="width: 40px; height: 40px; top: 50%; left: 70%;"></div>
+<div class="bubble" style="width: 80px; height: 80px; top: 80%; left: 40%;"></div>
+<div class="bubble" style="width: 30px; height: 30px; top: 30%; left: 85%;"></div>
+
 </body>
 </html>
