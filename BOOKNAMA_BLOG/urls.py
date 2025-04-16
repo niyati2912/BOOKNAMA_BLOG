@@ -7,7 +7,8 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.frontpage, name='frontpage'),  # Direct view
-    path('blog/', include('blog.urls')),          # Blog URLs
+    path('blog/', include('blog.urls')),   
+    path('post_blog/', views.post_blog, name='post_blog'),       # Blog URLs
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

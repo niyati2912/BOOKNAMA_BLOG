@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 Books Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f0e1;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #6a4c93;
+      color: #fff;
+      padding: 20px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+    }
+
+    .main-content {
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .book-card {
+      background: #fff;
+      margin: 15px;
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .book-card:hover {
+      transform: scale(1.05);
+    }
+
+    .book-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .book-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .book-card p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    /* Bubbles animation */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: float 20s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-50px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Bubble Sizes */
+    .bubble1 { width: 70px; height: 70px; top: 15%; left: 10%; }
+    .bubble2 { width: 50px; height: 50px; top: 25%; left: 55%; }
+    .bubble3 { width: 60px; height: 60px; top: 60%; left: 35%; }
+    .bubble4 { width: 80px; height: 80px; top: 80%; left: 75%; }
+    .bubble5 { width: 40px; height: 40px; top: 40%; left: 80%; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>📚 Books Collection</h1>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <!-- Book Card 1 -->
+    <div class="book-card">
+      <img src="https://via.placeholder.com/200x300" alt="Book 1">
+      <h3>Title of the Book</h3>
+      <p>Author: John Doe</p>
+      <p>A captivating mystery novel that will keep you on the edge of your seat.</p>
+    </div>
+
+    <!-- Book Card 2 -->
+    <div class="book-card">
+      <img src="https://via.placeholder.com/200x300" alt="Book 2">
+      <h3>Fantasy World</h3>
+      <p>Author: Jane Smith</p>
+      <p>Explore magical lands and epic battles in this thrilling fantasy adventure.</p>
+    </div>
+
+    <!-- Book Card 3 -->
+    <div class="book-card">
+      <img src="https://via.placeholder.com/200x300" alt="Book 3">
+      <h3>The Silent Observer</h3>
+      <p>Author: Emily Clark</p>
+      <p>A psychological thriller about a woman who witnesses a crime but is too afraid to speak out.</p>
+    </div>
+
+    <!-- Add more books as needed -->
+
+  </div>
+
+  <!-- Floating Bubbles -->
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
+  <div class="bubble bubble5"></div>
+
+</body>
+</html>

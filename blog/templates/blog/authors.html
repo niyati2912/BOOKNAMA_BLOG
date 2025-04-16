@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🖋️ Authors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f3f0f7;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #6a4c93;
+      color: #fff;
+      padding: 20px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+    }
+
+    .main-content {
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .author-card {
+      background: #fff;
+      margin: 15px;
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .author-card:hover {
+      transform: scale(1.05);
+    }
+
+    .author-card img {
+      width: 100%;
+      border-radius: 50%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .author-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .author-card p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    /* Bubbles animation */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: float 20s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-50px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Bubble Sizes */
+    .bubble1 { width: 70px; height: 70px; top: 10%; left: 15%; }
+    .bubble2 { width: 50px; height: 50px; top: 25%; left: 60%; }
+    .bubble3 { width: 60px; height: 60px; top: 60%; left: 30%; }
+    .bubble4 { width: 80px; height: 80px; top: 80%; left: 80%; }
+    .bubble5 { width: 40px; height: 40px; top: 35%; left: 80%; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>🖋️ Authors</h1>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <!-- Author Card 1 -->
+    <div class="author-card">
+      <img src="https://via.placeholder.com/150" alt="Author 1">
+      <h3>John Doe</h3>
+      <p>Best-selling author of mystery novels and short stories.</p>
+    </div>
+
+    <!-- Author Card 2 -->
+    <div class="author-card">
+      <img src="https://via.placeholder.com/150" alt="Author 2">
+      <h3>Jane Smith</h3>
+      <p>Innovative fantasy writer with a passion for world-building.</p>
+    </div>
+
+    <!-- Author Card 3 -->
+    <div class="author-card">
+      <img src="https://via.placeholder.com/150" alt="Author 3">
+      <h3>Emily Clark</h3>
+      <p>Literary fiction author focusing on human emotions and relationships.</p>
+    </div>
+
+    <!-- Add more authors as needed -->
+
+  </div>
+
+  <!-- Floating Bubbles -->
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
+  <div class="bubble bubble5"></div>
+
+</body>
+</html>

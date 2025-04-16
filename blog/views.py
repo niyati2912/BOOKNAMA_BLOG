@@ -60,3 +60,17 @@ def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('login')  # redirect after logout
+
+@login_required(login_url='/login/')
+def front_page(request):
+    return render(request, 'front_page.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+def front_page(request):
+    return render(request, 'front_page.html')
+
+def post_blog(request):
+    return render(request, 'post_blog.html')
